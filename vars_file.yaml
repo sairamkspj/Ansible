@@ -1,5 +1,5 @@
 - name: we are getting data form vars file
-  hosts: web
+  hosts: node
   become: yes
   vars_files:
   - vars.yaml
