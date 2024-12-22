@@ -1,0 +1,16 @@
+- name: sending data using prompt
+  hosts: node
+  vars_prompt:
+  - name: Course
+    prompt: enter the data of course
+    private: false
+  - name: Duration
+    prompt: enter the duration
+    private: false
+  - name: Trainer
+    prompt: enter trainer name
+    private: false
+  taks:
+  - name: printing data
+    ansible.builtin.debug:
+      msg: "iam doing {{ Course }} and {{ Duration }}. Teaching is done by {{ Trainer }}"
