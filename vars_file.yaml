@@ -3,6 +3,7 @@
   become: yes
   vars_files:
   - vars.yaml
+  tasks:
   - name: Printing file data
     ansible.builtin.debug:
       msg: "iam doing {{ Course }} and {{ Duration }}. Teaching is done by {{ Trainer }}"
