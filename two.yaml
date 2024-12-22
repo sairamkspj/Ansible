@@ -1,0 +1,6 @@
+- name: play two
+  hosts: node
+  tasks:
+  - name: we are adding something
+    ansible.builtin.debug:
+    
