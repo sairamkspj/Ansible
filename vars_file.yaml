@@ -1,0 +1,8 @@
+- name: we are getting data form vars file
+  hots: web
+  become: yes
+  var_file:
+  - vars.yaml
+  - name: Printing file data
+    ansible.builtin.debug:
+      msg: "iam doing {{ Course }} and {{ Duration }}. Teaching is done by {{ Trainer }}"
