@@ -3,4 +3,4 @@
   tasks:
   - name: we are adding something
     ansible.builtin.debug:
-    
+      msg: we are connecting the server
