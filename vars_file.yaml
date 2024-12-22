@@ -1,7 +1,7 @@
 - name: we are getting data form vars file
   hosts: web
   become: yes
-  var_file:
+  vars_files:
   - vars.yaml
   - name: Printing file data
     ansible.builtin.debug:
