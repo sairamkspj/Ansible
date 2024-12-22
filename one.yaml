@@ -2,5 +2,4 @@
   hosts: node
   tasks:
   - name: ping the server
-    ansible.buitin.ping:
-    
+    ansible.builtin.ping:
