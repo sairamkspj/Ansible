@@ -1,11 +1,23 @@
 - name: variables work
   hosts: node
   become: yes
-  vars:
+  vars: #play level variables
     Course: "Devops"
     Duration: "9 months"
     Trainer: "Siva kumar"
   tasks:
+  - name: Printing variables
+    ansible.builtin.debug:
+      msg: "iam doing {{ Course }} and {{ Duration }}. Teaching is done by {{ Trainer }}"
+  
+  - name: printing task level varables
+    vars:
+      Course: "AWS"
+      Duration: "3 months"
+      Trainer: "siva kumar reddy"
+    ansible.builtin.debug:
+      msg: "iam doing {{ Course }} and {{ Duration }}. Teaching is done by {{ Trainer }}"
+      
   - name: Printing variables
     ansible.builtin.debug:
       msg: "iam doing {{ Course }} and {{ Duration }}. Teaching is done by {{ Trainer }}"
