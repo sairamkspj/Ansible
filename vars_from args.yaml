@@ -3,5 +3,5 @@
   become: yes
   tasks:
   - name: adding data in console
-  ansible.builtin.debug:
+    ansible.builtin.debug:
     msg: "we are doing {{ Course }} and {{ Duration }} "
