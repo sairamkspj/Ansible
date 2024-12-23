@@ -21,4 +21,4 @@
   tasks:
   - name: printing data
     ansible.builtin.debug:
-      msg: "we are doing {{ Course }} and {{ Duration }}.Printing list values {{ list }}.printing dictionary  values {{ dictionary }}"
+      msg: "we are doing {{ Course }} and {{ Duration }}.Printing list values {{ list }}.printing dictionary values {{ dictionary }}"
