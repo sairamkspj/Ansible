@@ -2,22 +2,22 @@
   hosts: node
   become: yes
   vars:
-  Course: "Devops"
-  Duration: 90 hrs
+    Course: "Devops"
+    Duration: 90 hrs
 
-  list:
-  - var
-  - data
-  - shell
-  - aws
+    list:
+    - var
+    - data
+    - shell
+    - aws
 
-  dictionary:
-  sai: Chubby
-  dev: Environment
-  cloud: aws
-  aws:
-  - s3
-  - R53
+    dictionary:
+    sai: Chubby
+    dev: Environment
+    cloud: aws
+    aws:
+    - s3
+    - R53
   tasks:
   - name: printing data
   ansible.builtin.debug:
