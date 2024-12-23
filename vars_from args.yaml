@@ -1,0 +1,7 @@
+- name: giving data from console
+  hosts: node
+  become: yes
+  tasks:
+  - name: adding data in console
+  ansible.builtin.debug:
+    msg: "we are doing {{ Course }} and {{ Duration }} "
