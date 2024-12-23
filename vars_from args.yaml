@@ -5,3 +5,5 @@
   - name: adding data in console
     ansible.builtin.debug:
       msg: "we are doing {{ Course }} and {{ Duration }} "
+
+#ansible-playbook -i inventory.ini -e ansible_user=ec2-user -e ansible_password=DevOps321 'vars_from args.yaml' -e "Course=Devops Duration=6months"
