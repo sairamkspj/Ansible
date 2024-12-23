@@ -4,4 +4,4 @@
   tasks:
   - name: adding data in console
     ansible.builtin.debug:
-    msg: "we are doing {{ Course }} and {{ Duration }} "
+      msg: "we are doing {{ Course }} and {{ Duration }} "
