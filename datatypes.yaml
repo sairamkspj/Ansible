@@ -1,0 +1,24 @@
+- name: data types doing
+  hosts: node
+  become: yes
+  vars:
+  Course: "Devops"
+  Duration: 90 hrs
+
+  list:
+  - var
+  - data
+  - shell
+  - aws
+
+  dictionary:
+  sai: Chubby
+  dev: Environment
+  cloud: aws
+  aws:
+  - s3
+  - R53
+  tasks:
+  - name: printing data
+  ansible.builtin.debug:
+    msg: "we are doing {{ Course }} and {{ Duration }}.Printing list values {{ list }}.printing dictionary  values {{ dictionary }}"
