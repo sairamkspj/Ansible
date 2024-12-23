@@ -12,12 +12,12 @@
     - aws
 
     dictionary:
-    sai: Chubby
-    dev: Environment
-    cloud: aws
-    aws:
-    - s3
-    - R53
+      sai: Chubby
+      dev: Environment
+      cloud: aws
+      aws:
+      - s3
+      - R53
   tasks:
   - name: printing data
     ansible.builtin.debug:
