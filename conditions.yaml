@@ -10,5 +10,5 @@
   tasks:
   - name: lcondition
     ansible.builtin.debug:
-      msg: 'we are printing {{ Course }} an {{ duration }}"
+      msg: "we are printing {{ Course }} an {{ duration }}"
     when: Duration | int >=10
