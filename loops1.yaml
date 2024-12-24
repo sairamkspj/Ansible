@@ -1,0 +1,12 @@
+- name: installing nginx,tree
+  hosts: node
+  become: yes
+  tasks:
+  - name: started installing using loop
+    ansible.builtin.package:
+      name: "{{item}}"
+      state: present
+    loop:
+    - nginx
+    - tree
+    - httpd
