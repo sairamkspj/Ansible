@@ -1,5 +1,6 @@
 - name: looping concept
   hosts: local
+  connection: local
   tasks:
   - name: printing data from loop
     ansible.builtin.debug:
