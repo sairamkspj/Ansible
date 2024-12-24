@@ -1,0 +1,10 @@
+- name: using command
+  hosts: local
+  tasks:
+  - name: verifying user
+    ansible.builtin.command: id expense
+    register: User
+  
+  - name:
+    ansible.builtin.debug:
+      msg: "the users data{{ User }}"
