@@ -1,6 +1,6 @@
 - name: ctreating ec2 instances
   hosts: local
-  
+
   vars:
     vpcid: "vpc-0aa65d1b9b4c9a2d8"
     subnetid: "subnet-05e7f255b0adc7bee"
@@ -19,7 +19,7 @@
       instance_type: "t2.micro"
       security_group: "{{ sg_id }}"
       image_id: "{{ ami_id }}"
-    loop: {{ instances }}
+    loop: "{{ instances }}"
     register: ec2_instance
 
   - name: printing instance data
