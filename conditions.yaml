@@ -11,4 +11,4 @@
   - name: lcondition
     ansible.builtin.debug:
       msg: 'we are printing {{ Course }} an {{ duration }}"
-    when: Duration | int 10
+    when: Duration | int >=10
