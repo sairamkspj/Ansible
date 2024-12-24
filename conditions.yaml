@@ -10,5 +10,5 @@
   tasks:
   - name: condition
     ansible.builtin.debug:
-      msg: "we are printing {{ Course }} an {{ duration }}"
+      msg: "we are printing {{ Course }} an {{ Duration }}"
     when: Duration | int >=10
