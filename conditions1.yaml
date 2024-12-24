@@ -9,3 +9,6 @@
   - name:
     ansible.builtin.debug:
       msg: "the users data{{ User }}"
+    when: User.uid == 1002(expense)
+
+  #  ['uid=1002(expense) gid=1002(expense) groups=1002(expense)']
