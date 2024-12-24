@@ -1,0 +1,10 @@
+- name: looping concept
+  hosts: local
+  tasks:
+  - name: printing data from loop
+  ansible.builtin.debug:
+     msg: "we are giving data from loop.names {{ names }}"
+  loop:
+  - Ramesh
+  - Suresh
+  - Sai
