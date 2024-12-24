@@ -1,0 +1,14 @@
+- nmae: conditions topic
+  hosts: local
+  vars_prompt:
+  - name: Course
+    prompt: enter the course details
+    private: false
+  - name: Duration
+    prompt: enter the duration
+    private: false
+  tasks:
+  - name: lcondition
+    ansible.builtin.debug:
+      msg: 'we are printing {{ Course }} an {{ duration }}"
+    when: Duration | int 10
