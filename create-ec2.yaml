@@ -1,0 +1,33 @@
+- name: ctreating ec2 instances
+  hosts: local
+  
+  vars:
+    vpcid: "vpc-0aa65d1b9b4c9a2d8"
+    subnetid: "subnet-05e7f255b0adc7bee"
+    sg_id: "sg-0734861cf0080c859"
+    ami_id: "ami-09c813fb71547fc4f"
+    instances:
+    - mysql
+    - backend
+    - frontend
+    zone: saiawsdev.shop
+  tasks:
+  - name: creat ec2 
+    ansible.aws.ec2_instance:
+      name: "{{item}}"
+      vpc_subnet_id: "{{ subnetid }}"
+      instance_type: "t2.micro"
+      security_group: "{{ sg_id }}"
+      image_id: "{{ ami_id }}"
+    loop: {{ instances }}
+    register: ec2_instance
+
+  - name: printing instance data
+    ansible.builtin.debug:
+      msg: "data of ec2_instances {{ ec2_instance }}"
+  
+  # - name: creating r53
+  #   ansible.aws.route53:
+  #     state: present
+  #     zone: "{{ zone }}"
+  #     record:
